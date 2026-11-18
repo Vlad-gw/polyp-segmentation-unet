@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.env
+.venv/
+venv/
+*.pth
+*.pt
+*.ckpt
+*.zip
+kvasirseg_variant4_new/
+*.log

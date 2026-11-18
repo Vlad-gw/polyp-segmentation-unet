@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#0b1220"/><rect x="14" y="14" width="1172" height="672" rx="24" fill="#101b2d" stroke="#23374e"/>
+<text x="44" y="65" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#f8fafc">Polyp segmentation | Kvasir-SEG</text>
+<text x="44" y="99" font-family="Arial, sans-serif" font-size="20" fill="#94a3b8">100 held-out images · mean per-image score · higher is better</text>
+<g font-family="Arial, sans-serif"><text x="44" y="179" fill="#e2e8f0" font-size="20" font-weight="600">FPN · ResNet34</text>
+<rect x="330" y="160" width="670" height="27" rx="7" fill="#1e293b"/>
+<rect x="330" y="160" width="556.23" height="27" rx="7" fill="#14b8a6"/>
+<text x="1017" y="181" fill="#f8fafc" font-size="21" font-weight="700">83.02%</text>
+<rect x="330" y="199" width="670" height="19" rx="6" fill="#1e293b"/>
+<rect x="330" y="199" width="596.03" height="19" rx="6" fill="#14b8a6" opacity=".55"/>
+<text x="1017" y="216" fill="#94a3b8" font-size="18">88.96%</text>
+<text x="44" y="288" fill="#e2e8f0" font-size="20" font-weight="600">DeepLabV3+ · ResNet34</text>
+<rect x="330" y="269" width="670" height="27" rx="7" fill="#1e293b"/>
+<rect x="330" y="269" width="534.86" height="27" rx="7" fill="#4f46e5"/>
+<text x="1017" y="290" fill="#f8fafc" font-size="21" font-weight="700">79.83%</text>
+<rect x="330" y="308" width="670" height="19" rx="6" fill="#1e293b"/>
+<rect x="330" y="308" width="581.69" height="19" rx="6" fill="#4f46e5" opacity=".55"/>
+<text x="1017" y="325" fill="#94a3b8" font-size="18">86.82%</text>
+<text x="44" y="397" fill="#e2e8f0" font-size="20" font-weight="600">Custom U-Net · BCE + Dice</text>
+<rect x="330" y="378" width="670" height="27" rx="7" fill="#1e293b"/>
+<rect x="330" y="378" width="403.88" height="27" rx="7" fill="#3b82f6"/>
+<text x="1017" y="399" fill="#f8fafc" font-size="21" font-weight="700">60.28%</text>
+<rect x="330" y="417" width="670" height="19" rx="6" fill="#1e293b"/>
+<rect x="330" y="417" width="479.92" height="19" rx="6" fill="#3b82f6" opacity=".55"/>
+<text x="1017" y="434" fill="#94a3b8" font-size="18">71.63%</text>
+<text x="44" y="506" fill="#e2e8f0" font-size="20" font-weight="600">Custom U-Net · baseline</text>
+<rect x="330" y="487" width="670" height="27" rx="7" fill="#1e293b"/>
+<rect x="330" y="487" width="249.11" height="27" rx="7" fill="#64748b"/>
+<text x="1017" y="508" fill="#f8fafc" font-size="21" font-weight="700">37.18%</text>
+<rect x="330" y="526" width="670" height="19" rx="6" fill="#1e293b"/>
+<rect x="330" y="526" width="325.28" height="19" rx="6" fill="#64748b" opacity=".55"/>
+<text x="1017" y="543" fill="#94a3b8" font-size="18">48.55%</text></g>
+<circle cx="54" cy="635" r="9" fill="#22c55e"/><text x="74" y="642" font-family="Arial, sans-serif" font-size="19" fill="#e2e8f0">Top test IoU: 83.02% (FPN)</text>
+<rect x="885" y="613" width="265" height="45" rx="10" fill="#17263b" stroke="#334155"/>
+<rect x="900" y="626" width="22" height="10" rx="3" fill="#14b8a6"/>
+<text x="930" y="638" font-family="Arial, sans-serif" font-size="16" fill="#e2e8f0">IoU</text>
+<rect x="990" y="626" width="22" height="10" rx="3" fill="#14b8a6" opacity=".55"/>
+<text x="1020" y="638" font-family="Arial, sans-serif" font-size="16" fill="#e2e8f0">Dice</text>
+</svg>

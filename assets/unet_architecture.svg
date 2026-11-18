@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440">
+<rect width="1200" height="440" rx="20" fill="#101827"/>
+<g font-family="Arial, sans-serif">
+<text x="35" y="44" font-size="27" font-weight="700" fill="#f8fafc">Custom U-Net: encoder → bottleneck → decoder</text>
+<text x="35" y="73" font-size="17" fill="#94a3b8">DoubleConv 3×3 · MaxPool 2×2 · skip connections · output 1×256×256</text>
+<rect x="35" y="117" width="165" height="85" rx="11" fill="#284b85" stroke="#5b7aaa"/><text x="48" y="151" font-size="19" font-weight="700" fill="#f8fafc">Input / Conv</text><text x="48" y="182" font-size="17" fill="#cbd5e1">3→16 · 256²</text><rect x="244" y="145" width="165" height="85" rx="11" fill="#284b85" stroke="#5b7aaa"/><text x="257" y="179" font-size="19" font-weight="700" fill="#f8fafc">Down 1</text><text x="257" y="210" font-size="17" fill="#cbd5e1">32 · 128²</text><rect x="453" y="173" width="165" height="85" rx="11" fill="#284b85" stroke="#5b7aaa"/><text x="466" y="207" font-size="19" font-weight="700" fill="#f8fafc">Down 2</text><text x="466" y="238" font-size="17" fill="#cbd5e1">64 · 64²</text><rect x="662" y="201" width="165" height="85" rx="11" fill="#284b85" stroke="#5b7aaa"/><text x="675" y="235" font-size="19" font-weight="700" fill="#f8fafc">Down 3</text><text x="675" y="266" font-size="17" fill="#cbd5e1">128 · 32²</text><rect x="871" y="229" width="165" height="85" rx="11" fill="#334155" stroke="#5b7aaa"/><text x="884" y="263" font-size="19" font-weight="700" fill="#f8fafc">Bottleneck</text><text x="884" y="294" font-size="17" fill="#cbd5e1">256 · 16²</text>
+<text x="45" y="398" fill="#93c5fd" font-size="17">Encoder: four downsampling stages</text>
+<path d="M1045 272h58v-127H985" stroke="#14b8a6" stroke-width="3" fill="none"/>
+<rect x="965" y="98" width="198" height="78" rx="12" fill="#075b56" stroke="#14b8a6"/>
+<text x="982" y="127" font-size="18" font-weight="700" fill="#f8fafc">Decoder ×4</text>
+<text x="982" y="155" font-size="16" fill="#ccfbf1">Upsample + concat</text>
+<path d="M965 137h-143v-30H220" stroke="#14b8a6" stroke-width="3" fill="none" stroke-dasharray="9 8"/>
+<path d="M390 130v-26M600 158v-54M810 185v-81" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="7 7"/>
+<text x="455" y="99" font-size="16" fill="#fbbf24">skip features →</text>
+<text x="910" y="398" fill="#5eead4" font-size="17" text-anchor="end">Decoder: reconstruct 256×256 mask</text>
+<text x="1128" y="207" font-size="16" fill="#5eead4" text-anchor="middle">polyp / background</text>
+</g></svg>

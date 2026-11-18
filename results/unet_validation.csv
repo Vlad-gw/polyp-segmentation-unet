@@ -1,0 +1,7 @@
+model,epochs,best_epoch,validation_IoU_05,threshold,validation_IoU,best_val_loss
+E0_UNet_base,32,32,0.3563,0.70,0.3618,0.7560
+E1_UNet_BN_Dropout,19,10,0.3852,0.65,0.4013,0.7322
+E2_UNet_BCE_Dice,32,32,0.5639,0.70,0.5707,0.4863
+E3_UNet_Augmentation,32,30,0.4633,0.70,0.4907,0.5879
+E4_UNet_LR_Schedule,32,32,0.3962,0.70,0.4189,0.6407
+E5_UNet_Transpose,32,30,0.4309,0.70,0.4493,0.6132

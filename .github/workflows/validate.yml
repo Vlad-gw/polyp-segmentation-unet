@@ -1,0 +1,27 @@
+name: Validate portfolio sources
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax-and-notebook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Python and notebook syntax
+        run: |
+          python -m py_compile src/kvasirseg_worker.py
+          python -m json.tool notebooks/Polyp_Segmentation_Kvasir_SEG.ipynb > /dev/null
+          python - <<'PY'
+          import json, ast
+          p = "notebooks/Polyp_Segmentation_Kvasir_SEG.ipynb"
+          with open(p, encoding="utf-8") as f: data = json.load(f)
+          for i, cell in enumerate(data["cells"]):
+              if cell["cell_type"] != "code": continue
+              code = "".join(cell["source"]) if isinstance(cell["source"],list) else cell["source"]
+              if code.startswith("%%writefile "): code = code.split("\n",1)[1]
+              try: ast.parse(code)
+              except SyntaxError as exc: raise SystemExit(f"Cell {i}: {exc}")
+          print("Python files and notebook cells: syntax OK")
+          PY
